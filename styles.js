@@ -12,6 +12,16 @@ var myStyles = React.StyleSheet.create({
     width: "100%",
   },
 
+  otherContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "flex-start",
+    fontFamily: "Poppins",
+    backgroundColor: "#FFFFFF",
+    width: "100%",
+    gap: 20,
+  },
+
   // Splash screen
   fullScreen: {
     width: "100%",

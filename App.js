@@ -1,5 +1,6 @@
 import { useFonts } from "expo-font";
 import AppNavigation from "./AppNavigation";
+import { GlobalContextProvider } from "./context/GlobalContext";
 // import { GlobalArrayProvider } from "./context/GlobalArrayContext";
 
 export default function App() {
@@ -9,6 +10,10 @@ export default function App() {
   });
 
   if (fontsLoaded) {
-    return <AppNavigation />;
+    return (
+      <GlobalContextProvider>
+        <AppNavigation />
+      </GlobalContextProvider>
+    );
   }
 }

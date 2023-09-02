@@ -4,6 +4,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "./screens/HomeScreen";
 import ProfileScreen from "./screens/ProfileScreen";
+import WorkoutScreen from "./screens/WorkoutScreen";
+import FitScreen from "./screens/FitScreen";
+import RestScreen from "./screens/RestScreen";
 import AppLoading from "./screens/AppLoading";
 import Login from "./screens/Login";
 import HomeSolid from "./assets/icons/home_solid.png";
@@ -25,6 +28,21 @@ function PrivateStack() {
         name="Home"
         options={{ headerShown: false }}
         component={HomeTabs}
+      />
+      <AuthenticatedStack.Screen
+        name="Workout"
+        component={WorkoutScreen}
+        options={{ headerShown: false }}
+      />
+      <AuthenticatedStack.Screen
+        name="Fit"
+        component={FitScreen}
+        options={{ headerShown: false }}
+      />
+      <AuthenticatedStack.Screen
+        name="Rest"
+        component={RestScreen}
+        options={{ headerShown: false }}
       />
     </AuthenticatedStack.Navigator>
   );
@@ -80,6 +98,7 @@ function HomeTabs() {
           shadowColor: "rgba(50, 74, 89, 0.12)",
           shadowOpacity: 0.5,
           shadowOffset: { width: 0, height: 4 },
+          position: "absolute",
         },
       })}
     >
