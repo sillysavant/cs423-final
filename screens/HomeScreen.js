@@ -1,4 +1,4 @@
-import { Text, View, Image, SafeAre, SafeAreaView } from "react-native";
+import { Text, View, Image, StatusBar, SafeAreaView } from "react-native";
 import React, { useContext } from "react";
 import FitnessCards from "../components/FitnessCard";
 import { GlobalContext } from "../context/GlobalContext";

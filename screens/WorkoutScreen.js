@@ -11,10 +11,8 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import BackIcon from "../assets/icons/back.png";
 import CheckIcon from "../assets/icons/checked.png";
 import { GlobalContext } from "../context/GlobalContext";
-//   import { AntDesign } from '@expo/vector-icons';
 const WorkOutScreen = (props) => {
   const route = useRoute();
-  // console.log(route.params);
   const navigation = useNavigation();
   const { completed, setCompleted } = useContext(GlobalContext);
 
@@ -52,11 +50,11 @@ const WorkOutScreen = (props) => {
           source={{ uri: route.params.image }}
         />
 
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-          <Image
-            source={BackIcon}
-            style={{ position: "absolute", top: -160, left: 10 }}
-          />
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          style={{ position: "absolute", top: 20, left: 20 }}
+        >
+          <Image source={BackIcon} />
         </TouchableOpacity>
       </View>
 
